@@ -1,0 +1,11 @@
+language: node_js
+node_js: node
+services:
+- mongodb
+deploy:
+  provider: heroku
+  api_key:
+    secure: cDYRTK+jNJJOhwAW95khg+rcgXcjpozyg1IC269ZQ2Tx6njKh+5cW22WYt+IO3QBH6NGxRtL14AowQn8mMy9hbr4oTq2nNxXp90qCAKjxx7/Dky8ZG3g2465DL+eX1Aqi6AbqcZYj0jZkr51vBDfTxrWcD8nscYaD4N3emTnN6m3qnInhUY/nvyQ3L1mZ1/rquGP3BwEraIMSS7WI0djQKe/+D6dNQ+2qELtXpuvo42VuIlYv9pHI1h1B0v2OIuTnhRFg9A9CAs7o4ERUgY5Vo2Mp2+KzbvUKtG77bkNCSMSF2JKv2BbF/Si8kKQ7SkpLO6gau41eVkBaQAnq73JX3SDXvaD35LZZ+lNKwKCbeLEW9OLgmwHg2BJflwS04Oi4rmgB1di6E8XqXjg8uU5+C+flsdi6oZLRs0wwFd0MoO1Vrs71m6RqkpJuAjYKZUDuIgFrQiG59HSlORjBodC2HBNOt5tYhgEWH8k1i5MP7+pEcNs+M30bC0MKLSuxpTDiwrz24EAXbdD4s3SR/+8tGO7RLhAY3tBZHCjCcQVAraSqQm8D+uYhLGT0q9SeVcKC5FThBu+krWeIwpN1Oei1aDcJFeSbN6CQ1rwP27hsV10fiFHf92xDUmJS/N1lV//EUk2a7Y3wkZiPuy0FYI2qL4oELM2/84O1wFWgm0I/Qs=
+  app: rocky-caverns-41214
+  on:
+    repo: camillecondrey/mood-boost-api
