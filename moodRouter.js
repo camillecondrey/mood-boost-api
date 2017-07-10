@@ -77,7 +77,7 @@ moodRouter.delete('/:id', passport.authenticate('basic', {session: false}), (req
 		function() {
 			res.sendStatus(204);
 		});
-	console.log('deleting selected list');
+	console.log('deleting selected mood');
 	
 });
 

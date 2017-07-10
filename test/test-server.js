@@ -20,11 +20,13 @@ function seedMoodData(){
   return Mood.insertMany(seedData);
 }
 
-function generateListData() {
+function generateMoodData() {
   return {
    
-    name: faker.lorem.text(),
-    description: faker.lorem.sentence()
+    date: faker.lorem.date(),
+    description: faker.lorem.sentence(),
+    cause: faker.lorem.sentence(),
+    duration: faker.lorem.sentence()
    
   }
 }
