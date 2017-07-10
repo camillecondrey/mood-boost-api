@@ -52,7 +52,9 @@ userRouter.post('/', (req, res) => {
     .then(count => {
 
       if (count > 0) {
+        alert("taken")
         return res.status(422).json({message: 'username already taken'});
+        
       }
       // if no existing user, hash password
       return User.hashPassword(password)
@@ -106,7 +108,7 @@ const basicStrategy = new BasicStrategy(function(username, password, callback) {
 
 
 passport.use(basicStrategy);
-router.use(passport.initialize());
+userRouter.use(passport.initialize());
 
 
 userRouter.get('/me',
