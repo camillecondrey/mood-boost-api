@@ -22,7 +22,6 @@ function seedMoodData(){
 
 function generateMoodData() {
   return {
-   
     date: faker.lorem.date(),
     description: faker.lorem.sentence(),
     cause: faker.lorem.sentence(),
@@ -51,13 +50,14 @@ function tearDownDb(){
        .then(function(_res) {
          res = _res;  
          res.should.have.status(200);
-         res.should.be.json;
+        //  res.should.be.json;
        });
    });
  });
 
 
  it('should return tracked moods with the right fields', function () {
+   let resMood;
      return chai.request(app)
      .get('/')
      .then(function(res){
