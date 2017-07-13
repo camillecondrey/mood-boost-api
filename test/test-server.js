@@ -40,6 +40,9 @@ function tearDownDb(){
   return mongoose.connection.dropDatabase();
 }
 
+
+
+
 describe('API', function() {
   before(function (){
     runServer();
@@ -47,8 +50,57 @@ describe('API', function() {
   after(function() {
     closeServer();
   })
+
+describe('index page', function() {
+  it('exists', function(done) {
+    chai.request(app)
+      .get('/users')
+      .end(function(err, res) {
+        res.should.have.status(200);
+        
+        done();
+    });
+      });
+  });
+
+  describe('boosters page', function() {
+  it('exists', function(done) {
+    chai.request(app)
+      .get('/users')
+      .end(function(err, res) {
+        res.should.have.status(200);
+   
+        done();
+    });
+      });
+  });
+
+  describe('tracking page', function() {
+  it('exists', function(done) {
+    chai.request(app)
+      .get('/users')
+      .end(function(err, res) {
+        res.should.have.status(200);
+   
+        done();
+    });
+      });
+  });
+
+  describe('record mood page', function() {
+  it('exists', function(done) {
+    chai.request(app)
+      .get('/users')
+      .end(function(err, res) {
+        res.should.have.status(200);
+   
+        done();
+    });
+      });
+  });
+
   describe('GET endpoint', function() {
-      it('should return all existing tracked moods', function() {
+      it('should return users', function() {
       
       let res;
       return chai.request(app)
@@ -59,6 +111,18 @@ describe('API', function() {
          res.should.be.json;
        });
    });
- });
+  
+   it('should return tracked moods', function() {
+     let resMood;
+     return chai.request(app)
+       .get('/users/')
+       .then(function(_res) {
+         res = _res;  
+         res.should.have.status(200);
+         res.should.be.json;
+       });
+   });
+  });
 });
+
  
