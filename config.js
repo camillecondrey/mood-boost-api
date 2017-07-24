@@ -1,6 +1,6 @@
 exports.DATABASE_URL = process.env.DATABASE_URL ||
                        global.DATABASE_URL ||
-                      'mongodb://localhost/mood-boost-api';
+                      'mongodb://username:password@ds153609.mlab.com:53609/mood-boost';
                       exports.TEST_DATABASE_URL = (
                       	process.env.TEST_DATABASE_URL ||
                       	'mongodb://localhost/test-mood-boost-api');
