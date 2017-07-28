@@ -5,13 +5,6 @@ const {Mood} = require('./models');
 
 const moodRouter = express.Router();
 
-// moodRouter.use(function(req, res, next) {
-//   res.header("Access-Control-Allow-Origin", "*");
-//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-//   next();
-// });
-
-
 moodRouter.use(jsonParser);
 
 moodRouter.get('/', passport.authenticate('basic', {session: false}), (req, res) => {
